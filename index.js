@@ -13,7 +13,7 @@ const PORT = process.env.PORT ||  4000;
 //middleware
 app.use(express.json());
 app.use(cors({
-  origin: 'https://fooddeliveryfrontend-gamma.vercel.app',
+  origin: 'https://food-delivery-frontend-two-gamma.vercel.app',
   credentials: true,
 }));
 app.use("/api/food",foodRouter);
