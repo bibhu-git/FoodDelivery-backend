@@ -12,7 +12,10 @@ dotenv.config();
 const PORT = process.env.PORT ||  4000;
 //middleware
 app.use(express.json());
-app.use(cors());
+app.use(cors({
+  origin: 'https://fooddeliveryfrontend-gamma.vercel.app',
+  credentials: true,
+}));
 app.use("/api/food",foodRouter);
 app.use("/api/user",userRouter);
 app.use("/image",express.static("uploads"));
